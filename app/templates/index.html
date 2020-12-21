@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br><br>
+
+<div class="card-body" style="margin-top: 5%;">
+ <div class="row" style="justify-content: center;">
+   <div class="col-sm-4">
+   <div class="card card-image"
+   style="background-image: url('{{ url_for('static',filename='/images/algo.png') }}');">
+
+  <!-- Content -->
+  <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+    <div>
+      <h3 class="card-title pt-2"><strong>Algorithms</strong></h3>
+      <p>Basics of Algorithm, Some key points of the standard algorithms such as greedy algorithm</p>
+      <a class="btn btn-pink" href="{{ url_for('algo') }}" style="background-color: rgb(35, 9, 107); color:azure"><i class="fas fa-clone left"></i> Click Here</a>
+    </div>
+  </div>
+   </div>
+ <br>
+  </div>
+   <div class="col-sm-4">
+   <div class="card card-image"
+   style="background-image: url('{{ url_for('static',filename='/images/arch.jpg') }}');">
+ 
+  <!-- Content -->
+  <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+    <div>
+      <h3 class="card-title pt-2"><strong>Arch Linux</strong></h3>
+      <p>Arch linux is light weight and highly customizable Operating System. I will be showing some of my discoveries, tips and tricks </p>
+      <a class="btn btn-pink" href="{{ url_for('arch') }}" style="background-color: rgb(35, 9, 107); color:azure"><i class="fas fa-clone left"></i> Click Here</a>
+    </div>
+  </div>
+   </div>
+     <br><!-- Remember the positioning-->
+  </div>
+   
+  </div>
+  <!--New row guys -->
+  <div class="row" style="justify-content: center;">
+   <div class="col-sm-4">
+   <div class="card card-image"
+   style="background-image: url('{{ url_for('static',filename='images/C++.png') }}');">
+
+  <!-- Content -->
+  <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+    <div>
+      <h3 class="card-title pt-2"><strong>C++</strong></h3>
+      <p>Some original code and insights in c++ for competitive programming , Articles on concepts like data structures using c++ etc.</p>
+      <a class="btn btn-pink" href="{{ url_for('cpp') }}" style="background-color: rgb(35, 9, 107); color:azure"><i class="fas fa-clone left"></i> Click Here</a>
+    </div>
+  </div>
+   </div>
+ <br>
+  </div>
+   <div class="col-sm-4">
+   <div class="card card-image"
+   style="background-image: url('{{ url_for('static',filename='/images/program.jpg') }}');">
+
+  <!-- Content -->
+  <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+    <div>
+      <h3 class="card-title pt-2"><strong>Programs</strong></h3>
+      <p> Some Programmes i've written in python or c++ or some of shell scripts</p>
+      <a class="btn btn-pink" href="{{ url_for('programs') }}" style="background-color: rgb(35, 9, 107); color:azure"><i class="fas fa-clone left"></i> Click Here</a>
+    </div>
+  </div>
+   </div>
+     <br><!-- Remember the positioning-->
+  </div>
+   
+  </div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<br>
+<div class="container" style="margin-top: 10%; ">
+    <div class="card border-0 shadow my-5" style="width: max-content; ">
+      <div class="card-body p-5" style="background-color: white; color: rgb(0, 43, 136);  justify-content: center;">
+        <h1>Sign In</h1>
+        <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.username.label }}<br>
+                {{ form.username(size=32) }}
+            </p>
+            <p>
+                {{ form.password.label }}<br>
+                {{ form.password(size=32) }}
+            </p>
+            <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+            <p>{{ form.submit() }}</p>
+        </form>
+
+        <p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
+        <p>
+            Forgot Your Password?
+            <a href="{{ url_for('reset_password_request') }}">Click to Reset It</a>
+        </p>
+      </div>
+      </div>    
+      </div>    
+{% endblock %}  
+
+
+

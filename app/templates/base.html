@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        /* Set a background image by replacing the URL below */
+        body {
+  background: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pf-bg10-ake027-eye_2.jpg?w=1000&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=25d93b542ea0b1a81fca0db05ef6f833) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+            }
+            .blog-footer {
+                padding: 2.5rem 0;
+                color: #999;
+                text-align: center;
+                background-color: #f9f9f9;
+                border-top: .02rem solid #e5e5e5;
+                margin-bottom: 0;
+                padding-bottom: 0%;
+                }
+                .blog-footer p:last-child {
+                margin-bottom: 0;
+                }    
+        </style>
+ {% if title %}
+ <title>{{ title }} - Blog</title>
+ {% else %}
+ <title>Welcome to waseemahmed.in</title>
+ {% endif %}  </head>
+  <body>    
+
+
+
+
+
+
+
+<div class="container-fluid">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light ">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="{{ url_for('index') }}">Learn->Discover->Blog</a>
+  
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+  
+     
+
+
+      <!-- Links -->
+        
+      <ul class="navbar-nav ml-auto">
+        {% if current_user.is_anonymous %}
+
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ url_for('login') }}" >Login
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        {% else %}
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ url_for('logout') }}" >Logout
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+      <li class="nav-item active">
+        <a href="{{ url_for('user', username=current_user.username) }}" class="nav-link">{{ current_user.username }}
+          <span class="sr-only">(current)</span>
+
+        </a>
+      </li>
+        
+        {% endif %}
+
+        <li class="nav-item">
+          <a class="nav-link" href="algo.html">Algorithms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('arch') }}">Linux</a>
+        </li>
+            <li class="nav-item">
+          <a class="nav-link" href="cpp.html">C++</a>
+        </li>
+                  <li class="nav-item">
+          <a class="nav-link" href="programs.html">Programs</a>
+        </li>
+      </li>
+      <li class="nav-item">
+<a class="nav-link" href="#">About</a>
+</li>
+
+        
+      
+  
+      </ul>
+      <!-- Links
+          <div class="card-body p-5" style="background-color: rgb(27, 58, 99); color: white;">
+    -->       
+  </nav>  
+</div>
+{% block content %}
+
+{% block scripts %}
+    {{ super() }}
+    {{ moment.include_moment() }}
+{% endblock %}
+{% endblock %}
+
+<!-- Page Content -->
+
+  
+</body>
+</html>

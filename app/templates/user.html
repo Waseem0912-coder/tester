@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} Edit Profile{% endblock %}
+
+{% block content %}
+<div class="container" style="margin-top: 10%; ">
+    <div class="card border-0 shadow my-5" style="width: max-content; ">
+      <div class="card-body p-5" style="background-color: white; color: rgb(0, 43, 136);  justify-content: right;">
+            <div class="col-m-4">
+                <img class="img-rounded profile-thumbnail" src="{{ user.gravatar(size=256) }}">
+            </div>
+<div class="col-m-4" style="justify-content: right;">
+                
+                    <h1>User: {{ user.username }}</h1>
+                    {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
+                    {% if user.last_seen %}<p>Last seen on: {{ user.last_seen }}</p>{% endif %}
+                    <p><a href="{{ url_for('edit_profile') }}">Edit your profile</a></p>
+                   
+                
+    
+        </div>  
+</div>
+    </div>
+</div>
+
+{% endblock %}

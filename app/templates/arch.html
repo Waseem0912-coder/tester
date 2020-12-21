@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{{ title}}
+{% block content %}
+
+<div class="container" style="margin-top: 10%; ">
+    <div class="card border-0 shadow my-5">
+      <div class="card-body p-5" style="background-color: white; color: rgb(0, 43, 136);">
+
+
+<p class="lead"><!-- Section: Blog v.3 -->
+  <section class="my-5">
+  
+    <!-- Section heading -->
+    <h2 class="h1-responsive font-weight-bold text-center my-5">Recent posts</h2>
+    <!-- Section description -->
+    <p class="text-center dark-grey-text w-responsive mx-auto mb-5">Arch Linux Posts</p>
+  
+    <!-- Grid row -->
+    <div class="row">
+  
+      <!-- Grid column -->
+      <div class="col-lg-5 col-xl-4">
+  
+        <!-- Featured image -->
+        <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
+          <img class="img-fluid" src="{{ url_for('static', filename='/images/zsh_base.png') }}" alt="Sample image">
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+  
+      </div>
+      <!-- Grid column -->
+  
+      <!-- Grid column -->
+      <div class="col-lg-7 col-xl-8">
+  
+        <!-- Post title -->
+        <h3 class="font-weight-bold mb-3"><strong>Terminal tricks part 1</strong></h3>
+        <!-- Excerpt -->
+        <p class="dark-grey-text">A few terminal tricks including explanation of why zsh is so good and fuzzyfilefinder </p>
+        <!-- Post data -->
+        <!-- Read more button -->
+        <a href="{{ url_for('terminal_tricks_part_1') }}" class="btn btn-primary btn-md">Read more</a>
+  
+      </div>
+      <!-- Grid column -->
+  
+    </div>
+    <!-- Grid row -->
+  
+    <hr class="my-5">
+  
+    <!-- Grid row -->
+    <div class="row">
+  
+      <!-- Grid column -->
+      <div class="col-lg-5 col-xl-4">
+  
+        <!-- Featured image -->
+        <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
+          <img class="img-fluid" src="{{ url_for('static', filename='/images/vim_ycm_plugin.gif') }}" alt="Sample image">
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+  
+      </div>
+      <!-- Grid column -->
+  
+      <!-- Grid column -->
+      <div class="col-lg-7 col-xl-8">
+  
+        <!-- Post title -->
+        <h3 class="font-weight-bold mb-3"><strong>Vim Plugins</strong></h3>
+        <!-- Excerpt -->
+        <p class="dark-grey-text">List of vim plugins i use and their functionality.</p>
+      
+        <a href="{{ url_for('vim_plugin') }}" class="btn btn-primary btn-md">Read more</a>
+  
+      </div>
+      <!-- Grid column -->
+  
+    </div>
+    <!-- Grid row -->
+  
+    <hr class="my-5">
+  
+    <!-- Grid row -->
+    <div class="row">
+  
+      <!-- Grid column -->
+      <div class="col-lg-5 col-xl-4">
+  
+        <!-- Featured image -->
+        <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
+          <img class="img-fluid" src="" alt="Sample image">
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+  
+      </div>
+      <!-- Grid column -->
+  
+      <!-- Grid column -->
+      <div class="col-lg-7 col-xl-8">
+  
+        <!-- Post title -->
+        <h3 class="font-weight-bold mb-3"><strong>Upcoming</strong></h3>
+        <!-- Excerpt -->
+        <p class="dark-grey-text">Upcoming to be relased by 2020 v2.</p>
+        <!-- Read more button -->
+        <a class="btn btn-primary btn-md">Read more</a>
+  
+      </div>
+      <!-- Grid column -->
+  
+    </div>
+    <!-- Grid row -->
+  
+  </section>
+  <!-- Section: Blog v.3 -->
+      </div>
+    </div>
+  </div>
+  {% endblock %}
